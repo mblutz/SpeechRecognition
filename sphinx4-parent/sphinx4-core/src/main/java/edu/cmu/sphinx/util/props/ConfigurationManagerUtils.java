@@ -470,7 +470,7 @@ public final class ConfigurationManagerUtils {
     public static URL resourceToURL(String location) throws MalformedURLException {
         Matcher jarMatcher = jarPattern.matcher(location);
         if (jarMatcher.matches()) {
-            String resourceName = "/resources" + jarMatcher.group(1);
+            String resourceName = jarMatcher.group(1);
             return ConfigurationManagerUtils.class.getResource(resourceName);
         } else {
             if (location.indexOf(':') == -1) {
