@@ -59,7 +59,7 @@ public class SpeechRecognizerDemo {
                       
         // open file for the first time to begin recognition
         InputStream stream = new BufferedInputStream(TranscriberDemo.class
-        		.getResourceAsStream("/edu/cmu/sphinx/demo/aligner/10001-90210-01803.wav"));
+        		.getResourceAsStream("/resources/edu/cmu/sphinx/demo/aligner/10001-90210-01803.wav"));
         //10001-90210-01803
         //nsa_NoNoise_converted
         //File file = new File("/edu/cmu/sphinx/demo/aligner/10001-90210-01803.wav");
@@ -106,7 +106,7 @@ public class SpeechRecognizerDemo {
             stream.close();
             // re-initialize the recognition process
             stream = new BufferedInputStream(TranscriberDemo.class
-                    .getResourceAsStream("/edu/cmu/sphinx/demo/aligner/10001-90210-01803.wav"));
+                    .getResourceAsStream("/resources/edu/cmu/sphinx/demo/aligner/10001-90210-01803.wav"));
             
             // skip ahead to end of last utterance
             stream.skip(bytesToSkip);
@@ -118,7 +118,7 @@ public class SpeechRecognizerDemo {
         // Live adaptation to speaker with speaker profiles
 
         stream = new BufferedInputStream(TranscriberDemo.class
-                .getResourceAsStream("/edu/cmu/sphinx/demo/aligner/10001-90210-01803.wav"));
+                .getResourceAsStream("/resources/edu/cmu/sphinx/demo/aligner/10001-90210-01803.wav"));
         stream.skip(44);
 
         // Stats class is used to collect speaker-specific data
@@ -135,7 +135,7 @@ public class SpeechRecognizerDemo {
 
         // Decode again with updated transform
         stream = new BufferedInputStream(TranscriberDemo.class
-                .getResourceAsStream("/edu/cmu/sphinx/demo/aligner/10001-90210-01803.wav"));
+                .getResourceAsStream("/resources/edu/cmu/sphinx/demo/aligner/10001-90210-01803.wav"));
         stream.skip(44);
         recognizer.startRecognition(stream);
         while ((result = recognizer.getResult()) != null) {
