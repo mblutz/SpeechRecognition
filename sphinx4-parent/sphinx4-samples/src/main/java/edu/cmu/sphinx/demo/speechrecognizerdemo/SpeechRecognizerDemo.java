@@ -40,13 +40,13 @@ import edu.cmu.sphinx.result.WordResult;
 public class SpeechRecognizerDemo {
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Loading models...");
+        //System.out.println("Loading models...");
 
         Configuration configuration = new Configuration();
 
         // Load models
         configuration
-                .setAcousticModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us");
+                .setAcousticModelPath("resource:/edu/cmu/sphinx/models/en-us/cmusphinx-en-us-5.2");
         configuration
                 .setDictionaryPath("resource:/edu/cmu/sphinx/models/en-us/cmudict-en-us.dict");
         configuration
